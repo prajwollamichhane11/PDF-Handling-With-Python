@@ -1,16 +1,18 @@
 <h1>Python PDF Handling Tutorial</h1>
+
+
 <p style="text-align: justify;">Python is a highly versatile language with a huge set of libraries. It is a high level language with simple syntax. Python has a reach in various fields like Machine Learning, Cybersecurity, Web Development, Application Development etc. Thus, this language is mostly preferred among developers and engineers.</p>
 <p style="text-align: justify;">In this tutorial, we will be working on PDFs using Python. PDFs or the Portable Document Format is a file format of a document consisting of texts, images, tables, etc which are generally used when we need to save files that cannot be further modified or be easily shared or printed. This file format was developed by Adobe in 1993 to present documents, including formatted texts and images in a manner that is independent of applications, software, hardware and operating systems. &nbsp;</p>
 <p style="text-align: justify;">Here, we will be performing some serious stuff like: Extracting and Adding Pages, Texts, Images, Tables, Watermark and much more on a PDF file using Python.</p>
+
 <h2>Popular Python PDF Libraries</h2>
+
 <p style="text-align: justify;">Python provides a pool of libraries that are used to manipulate a PDF file. Some popular libraries that are used oftenly while working with PDFs are:</p>
 	<li>PDFMiner</li>
 	<li>PyPDF4</li>
 	<li>PyPDF2</li>
 	<li>Python-Docx</li>
 	<li>PyMuPDF, etc.</li>
-
-
 <p style="text-align: justify;">While there are several libraries that are used to perform various functional operations with PDFs in Python, we will only cover the usage of a few libraries like PDFMiner, PyPDF2, PyMuPDF, reportlab etc in this chapter. PyPDF2 is the most widely preferred Python module while working with PDFs. It is easy to use and it has a lot of features. However, when it comes to extracting texts, PDFMiner is much more accurate and reliable. PDFMiner was specially developed to extract texts from PDF files. There are several cases where one library is better than other in different aspects when it comes to manipulating the PDF files. Thus, on the basis of easiness and reliability, we will discuss various libraries that are used to manipulate PDF files in this tutorial.</p>
 
 <h2>Extracting Texts from PDFs</h2>
@@ -21,6 +23,7 @@
 <p style="text-align: justify;">First, we have to install PDFMiner.</p>
 
 <h3>Installing PDFMiner</h3>
+
 <p style="text-align: justify;">PDFMiner can be installed by performing the following operations.</p>
 <pre>
 	>>> pip install "pdfminer.six==20200124"
@@ -66,10 +69,10 @@
 <p style="text-align: justify;">First, we have to import the necessary functions and classes from the PDFMiner module. According to the PDFMiner documentation, PDFPageInterpreter is used to process page contents while PDFResourceManager is used to store shared resources such as fonts or images. PDFPage is used to perform page by page analysis of information. LAParams loads up the Layout analysis of character, textbox, textlines, images and figures. Using these, the TextConverter function converts a PDF document into texts.</p>
 
 <p style="text-align: justify;">We are giving &ldquo;sample.pdf&rdquo; as a PDF file to be analyzed and processed using PDFMiner. We can extract texts from a PDF file by the help of process_page function.</p>
-
 <p style="text-align: justify;">Finally, the print(text) function will print out the extracted text from a PDF. So, in this way, we can extract texts out of a PDF file using the PDFMiner.</p>
 
 <h2>Extracting Images from PDFs</h2>
+
 <p style="text-align: justify;">When we have to extract images from PDF, we can use PyMuPDF. This has a fitz module which makes it very easy to extract images from a PDF file. Before going to the module directly, we can install the libraries as follows.</p>
 <h3>Installing PyMuPDF</h3>
 <p style="text-align: justify;">Perform the following.</p>
@@ -114,8 +117,11 @@
 
 
 <h2>Extracting Tables from PDFs</h2>
+
 <p style="text-align: justify;">Extracting tables is quite easy compared to images and text extraction. There is a predefined library called &ldquo;camelot&rdquo; which can be used for table extraction. Before jumping into the coding implementation, we have to install the library first.</p>
+
 <h3>Installing camelot</h3>
+
 <p style="text-align: justify;">The camelot module can be installed by performing a simple pip install as follows:</p>
 <pre>
 	>>> pip install camelot
@@ -133,9 +139,11 @@
 <p style="text-align: justify;">Here, we are reading the PDF file with a table using the camelot function read_pdf(). All the tables are stored in the tables variable as a list. In the code, we are printing out the first table on the table.pdf file. So, in this way we can extract tables from PDF files.</p>
 
 <h2>Extracting Urls from PDFs</h2>
+
 <p style="text-align: justify;">Urls extraction is another handy function that Python provides. Python provides a library called &ldquo;pdfx&rdquo; which is generally used when we have to extract urls from a PDF file. We can use the libraries like PyPDF2, PDFMiner, etc to extract texts and use regular expressions to find out the urls. However, this process is long and hectic. Therefore, for the ease in implementation and shortness of code, we will use the pdfx library for urls extraction from a PDF file.</p>
 
 <h3>Installing pdfx</h3>
+
 <p style="text-align: justify;">The pdfx module can be installed by performing a simple pip install as follows:</p>
 <pre>
 	>>> pip install pdfx
@@ -159,8 +167,11 @@
 
 
 <h2>Extracting Pages from PDFs as an Image</h2>
+
 <p style="text-align: justify;">This is the final section of extraction from a PDF file. In this section, we will learn the implementations of how we can extract pages from a PDF file in the form of an image. For this, we will use another short and simple library called pdf2image. This library is generally used when we have to take the PDF files into images. Let&rsquo;s get started by installing the module.</p>
+
 <h3>Installing pdf2image</h3>
+
 <p style="text-align: justify;">The pdf2image module can be installed by performing as follows:</p>
 <pre>
 	>>> pip install pdf2image
@@ -184,8 +195,11 @@
 
 
 <h2>Creating a PDF File</h2>
+
 <p style="text-align: justify;">Python provides us a feature where we could also create a PDF file from the code directly as well. We can add texts, images, tables and forms from a Python code directly onto a PDF file. For creating a PDF file, we will be using a library called reportlab.</p>
+
 <h3>Installing reportlab</h3>
+
 <p style="text-align: justify;">For installing the reportlab library for PDF creation, we can perform the following:</p>
 <pre>
 	>>> pip install reportlab
@@ -206,6 +220,7 @@
 <p style="text-align: justify;">Here, we are creating a PDF file called new_file.pdf. We are setting the size of the PDF page to a LETTER size which is a predefined size given by reportlab. These are variables and can be changed upon need. Now, we will see various other elements that could be added on a PDF file.</p>
 
 <h2>Adding Text on a PDF</h2>
+
 <p style="text-align: justify;">Texts could be easily added on a PDF file using the reportlab library. Following is the simple implementation for this.</p>
 
 <pre>
@@ -226,9 +241,12 @@
 	canvas.save()
 </pre>
 
+<img src="Image/add_text.jpg" alt="Adding a simple colored text on a PDF page." height="400px" width="800px">
+
 <p style="text-align: justify;">We are first creating a PDF file named text_file.pdf. Since we are going to write some texts on this PDF file, we have to set up the fonts and font sizes. We set the PDF size to LETTER, fonts to Courier and the font size to 16 using the predefined functions given by reportlab. Then, we also chose red colour for the text using the setFillColor function. After this, we are writing on the PDF file specifying the position of text to be written on the PDF page. Hence, saving all the changes made, a PDF file is created.</p>
 
 <h2>Adding Image on a PDF</h2>
+
 <p style="text-align: justify;">We can use the same reportlab library to add images on the PDF as well. Adding images can be a tedious job compared to adding texts on a PDF. Images have their unique sizes and so do the PDF files. So, to manage the size and find the optimal position for images can be a tedious task.</p>
 
 <p style="text-align: justify;">In the following implementation, we will see how we can add images on a PDF file.</p>
@@ -242,9 +260,12 @@
 	canvas.save()
 </pre>
 
-<p style="text-align: justify;">Here, x.jpeg is the image we are adding to the (100,450) position of the PDF. The report lab considers the bottom left position of the PDF as (0,0) accordingly and manages the position of the image in a similar manner. The letter size PDF has dimensions of 612 by 792 and (100,450) will be the position of our image on the PDF.</p>
+<img src="Image/add_image.jpg" alt="Adding a simple image of a cat on a PDF page." height="400px" width="800px">
+
+<p style="text-align: justify;">Here, x.jpeg is the image of a cat we are adding to the (100,450) position of the PDF. The report lab considers the bottom left position of the PDF as (0,0) accordingly and manages the position of the image in a similar manner. The letter size PDF has dimensions of 612 by 792 and (100,450) will be the position of our image on the PDF.</p>
 
 <h2>Adding Tables on a PDF</h2>
+
 <p style="text-align: justify;">We can add tables on the PDF using the reportlab library. Let&rsquo;s see the implementation on how we can add tables and then discuss it.</p>
 
 <pre>
@@ -283,6 +304,8 @@
 	document.build(items)
 </pre>
 
+<img src="Image/add_tables.jpg" alt="Creating a simple image to store personal information on a PDF page." height="400px" width="800px">
+
 <p style="text-align: justify;">We are creating a table.pdf file which has a letter size. The information to be stored on the table is given on the list &ldquo;data&rdquo;. Here, the shape of the list is 6 by 2. There are 6 rows and 2 columns. So, this is the table that will be formed on the PDF. Now, we have to define the margin of the table, the grid lines, their sizes and formations as well. We have done this on the setStyle function. You can also refer to the original documentation of reportlab for table creation. If these grid lines were not defined, then there would be just the information on the PDF in an arranged manner but without being separated by grid lines and borders.</p>
 
 <h2>Highlighting Text on a PDF</h2>
@@ -290,28 +313,31 @@
 
 <pre>
 	import fitz
-	 
+	    
 	# opening the pdf file
 	pdf_file = fitz.open("sample.pdf")
-	 
+	    
 	# input text to be highlighted
-	text = "<sample_text_to_highlight>"
-	 
+	text = "Recommender"
+	    
 	# iterating through pages for highlighting the input phrase
 	for page in pdf_file:
-	   match_words = page.searchFor(text)
-	 
-	   for word in match_words:
-	       highlight = page.addHighlightAnnot(word)
-	       highlight.update()
-	 
+	    match_words = page.searchFor(text)
+	    
+	    for word in match_words:
+	        highlight = page.addHighlightAnnot(word)
+	        highlight.update()
+	    
 	# saving the pdf file as highlighted.pdf
 	pdf_file.save("highlighted.pdf")
 </pre>
 
-<p style="text-align: justify;">In this implementation, firstly, we are loading our PDF file sample.pdf which is to be highlighted. The phrase that is to be highlighted is given on the text variable. Then, we iterate through each of the pages to find if there are any possible matches to the phrase. If we find a match to the phrase, we highlight them using the addHighlightAnnot function from fitz. So, in this way, we obtain a highlighted text on a PDF file.</p>
+<img src="Image/add_highlight.jpg" alt="Highlighting a word Recommender on the PDF page." height="400px" width="800px">
+
+<p style="text-align: justify;">In this implementation, firstly, we are loading our PDF file sample.pdf which is to be highlighted. The phrase that is to be highlighted is given on the text variable. "Recommender" is the word that we are highlighting. Then, we iterate through each of the pages to find if there are any possible matches to the word. If we find a match to the word, we highlight them using the addHighlightAnnot function from fitz. So, in this way, we obtain a highlighted text on a PDF file.</p>
 
 <h2>Creating Forms on a PDF</h2>
+
 <p style="text-align: justify;">Now, we will perform some advanced level stuff on PDF using Python. In the following few sections, we will discuss how we can create and manipulate PDF forms using Python. The forms are interactive and can be manipulated. The forms consist of various fields like: text fields, long paragraphs, radio buttons, check boxes, dropdowns and much more. We are using the same library &ldquo;reportlab&rdquo; to create and manipulate forms on a PDF file using python.</p>
 <p style="text-align: justify;">Let&rsquo;s first see how we can create PDF forms using Python on the following implementation.</p>
 
@@ -414,6 +440,8 @@
 	   create_simple_form()
 </pre>
 
+<img src="Image/create_form.jpg" alt="Creating a simple form to collect personal information." height="400px" width="800px">
+
 <p style="text-align: justify;">Here, we are creating a basic form where the personal information of a user is entered. The fields for storing personal information like: first name, last name, age, gender, location, etc. could be created using this reportlab library in Python. This is very basic and is easy to implement. While defining each field, we have to define the location of the field we are defining. The location is the X,Y coordinate where the left bottom most part of the page is (0,0) and the axis value increases accordingly. Moreover, fonts on each field, background color on each field and several factors have been defined by reportlab which can be further explored and used when required.</p>
 
 <h2>Filling Forms on a PDF</h2>
@@ -457,6 +485,7 @@ Let&rsquo;s move on to the Python implementations of filling forms on a PDF.</p>
 	   fill_pdf(pdf_template, pdf_output, data)
 </pre>
 
+<img src="Image/fill_form.jpg" alt="Filling a PDF form directly through the code." height="400px" width="800px">
 
 <p style="text-align: justify;">Here, we are opening the personal_information.pdf which consists of the form that we want to fill. We will save the form after filling with a file name as output.pdf. The data that we are filling on the form are stored sequentially on the list data. After this, we have defined a function fill_pdf which consists of necessary implementations to fill up a PDF form. In the fill_pdf function, we use the ANNOT_KEY to find the possible fillable positions on the PDF. Then, we load our sequential list data that we defined earlier one by one on those empty fields. This is the surface overview of the working of the pdfrw library for filling up the PDF forms. However, there is much more and this could be customizable to make a bigger PDF form as well.</p>
 
@@ -523,6 +552,12 @@ Let&rsquo;s move on to the Python implementations of filling forms on a PDF.</p>
 	doc.save("output.pdf")
 </pre>
 
+<p style="text-align: justify;">The logo that we are adding as watermark is this.</p>
+<img src="Image/logo.jpg" alt="Logo that we are using as watermark." height="200px" width="200px">
+
+<p>After adding the logo, the PDF page appears as follows.</p>
+<img src="Image/watermark.jpg" alt="Filling a PDF form directly through the code." height="400px" width="800px">
+
 <p style="text-align: justify;">This is the implementation which is similar to adding images on a PDF page. Here, we are adding a &ldquo;logo.png&rdquo; image at the left bottom most part of the PDF file from (0,0) to (100,100) units. This will act as a watermark distinguishing the PDF from others. &nbsp;</p>
 
 <h2>Removing Watermark From a PDF</h2>
@@ -565,6 +600,13 @@ Let&rsquo;s move on to the Python implementations of filling forms on a PDF.</p>
 	outputStream = open("output.pdf", "wb")
 	output.write(outputStream)
 </pre>
+
+
+<p>The watermark we are trying to remove on a PDF is this:</p>
+<img src="Image/watermark_toremove.jpg" alt="DOI line is treated as an watermark to remove." height="400px" width="600px">
+
+<p>After the above coding implementations, the watermark is removed and the PDF appears as follows:</p>
+<img src="Image/watermark_removed.jpg" alt="DOI line is completely removed from the PDF pages." height="400px" width="600px">
 
 <p style="text-align: justify;">The comments above the codes will make it easy to understand. Overally, what&rsquo;s happening is, we are reading a PDF file called &ldquo;sample.pdf&rdquo; first. The watermark that we wish to remove is already set in the &ldquo;water_mark&rdquo; variable. Here, we are removing the &ldquo;DOI&rdquo; watermark. In other words, we are replacing the &ldquo;DOI&rdquo; watermark with nothing. So, we explore through every element of PDF pages and if the watermark matches to our water_mark variable, we replace the position with nothing as a whole removing the watermark. In this way, we can remove watermarks. This is a simple definition of a watermarks removal. The watermarks however could be large and disturbing. Such watermarks are hard to remove compared to the textual watermarks.</p>
 
@@ -610,10 +652,15 @@ Let&rsquo;s move on to the Python implementations of filling forms on a PDF.</p>
 	output.write(outputStream)
 </pre>
 
+<img src="Image/word_to_replace.jpg" alt="First name of the author is something we want to replace." height="250px" width="600px">
 
-<p style="text-align: justify;">Here, we are reading a research paper. We will try to replace the name of the author. The name of the author is "Dominik" and we are replacing that with "John". The working process has already been discussed while removing watermarks. As a whole, this is one way to search and replace texts on a PDF file.</p>
+<p style="text-align: justify;">Here, we are reading a research paper. We will try to replace the name of the author. The name of the author is "Dominik" and we are replacing that with "John".</p>
+
+<img src="Image/word_replaced.jpg" alt="The first name of the author has been replaced from Dominik to John." height="250px" width="600px">
+<p>The working process has already been discussed while removing watermarks. As a whole, this is one way to search and replace texts on a PDF file.</p>
 
 <h2>Extracting Metadata of a PDF</h2>
+
 <p style="text-align: justify;">Metadata is also called data about data. PDF files have metadata like: author of the file, date of creation, size, dimensions, etc and much more. These metadata are very important as they provide information about the shape, size and origin of the PDF file. Such information is important. Using PyPDF2 library on Python, we can easily extract these metadata as JSON within a few lines of code.</p>
 
 <p style="text-align: justify;">The coding implementations for extracting metadata is shown below.</p>
@@ -628,7 +675,9 @@ Let&rsquo;s move on to the Python implementations of filling forms on a PDF.</p>
 	   print(info)
 </pre>
 
-<p style="text-align: justify;">We are reading a PDF file called sample.pdf. Using the getDocumentInfo function, we are able to &nbsp;extract the metadata information.</p>
+<p style="text-align: justify;">We are reading a PDF file called sample.pdf.</p>
+<img src="Image/reading_metadata.jpg" alt="The metadata information is extracted." height="250px" width="600px">
+<p>Using the getDocumentInfo function, we are able to &nbsp;extract the metadata information.</p>
 
 <h2>Adding and Editing Metadata on a PDF</h2>
 
@@ -659,6 +708,9 @@ Let&rsquo;s move on to the Python implementations of filling forms on a PDF.</p>
 </pre>
 
 <p style="text-align: justify;">First, we are reading a PDF file sample.pdf whose metadata we are going to read and edit. Our edited and added metadata PDF will be saved to the PDF file output.pdf. Because of this, we are creating two elements, the reader and the writer. The reader reads all the information from an original PDF and the writer element writes it to the output PDF.</p>
-<p style="text-align: justify;">There are two lines on the coding implementation where we have performed editing and adding metadata. &ldquo;Author&rdquo; information is already present on the metadata of sample.pdf, so adding value to this key again will replace the original author name to John Doe as mentioned on the code. Similarly, today_weather was not present as a metadata on the PDF file and this is the new metadata we are adding to the PDF file just to present the weather condition when the PDF was created. These are just some examples. But, you can do much more.</p>
-<p style="text-align: justify;"><br></p>
 
+<img src="Image/editing_adding_metadata.jpg" alt="The metadata information is replaced and added." height="250px" width="600px">
+
+<p style="text-align: justify;">There are two lines on the coding implementation where we have performed editing and adding metadata. &ldquo;Author&rdquo; information is already present on the metadata of sample.pdf, so adding value to this key again will replace the original author name to John Doe as mentioned on the code. Similarly, today_weather was not present as a metadata on the PDF file and this is the new metadata we are adding to the PDF file just to present the weather condition when the PDF was created. These are just some examples. But, you can do much more.</p>
+
+<p style="text-align: justify;">In this way, we can perform a lot of reading and manipulation operations on a PDF file using Python. We observed that editing, replacing and overally manipulating operations are not simple as this was not the deliberate use for a PDF file format. Also, Python is a highly powerful language with a vast features and applications.</p>
