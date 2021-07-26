@@ -1,10 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>PDF Handling Using Python Tutorial</title>
-</head>
-<body>
-
 <h1>Python PDF Handling Tutorial</h1>
 <p style="text-align: justify;">Python is a highly versatile language with a huge set of libraries. It is a high level language with simple syntax. Python has a reach in various fields like Machine Learning, Cybersecurity, Web Development, Application Development etc. Thus, this language is mostly preferred among developers and engineers.</p>
 <p style="text-align: justify;">In this tutorial, we will be working on PDFs using Python. PDFs or the Portable Document Format is a file format of a document consisting of texts, images, tables, etc which are generally used when we need to save files that cannot be further modified or be easily shared or printed. This file format was developed by Adobe in 1993 to present documents, including formatted texts and images in a manner that is independent of applications, software, hardware and operating systems. &nbsp;</p>
@@ -669,5 +662,3 @@ Let&rsquo;s move on to the Python implementations of filling forms on a PDF.</p>
 <p style="text-align: justify;">There are two lines on the coding implementation where we have performed editing and adding metadata. &ldquo;Author&rdquo; information is already present on the metadata of sample.pdf, so adding value to this key again will replace the original author name to John Doe as mentioned on the code. Similarly, today_weather was not present as a metadata on the PDF file and this is the new metadata we are adding to the PDF file just to present the weather condition when the PDF was created. These are just some examples. But, you can do much more.</p>
 <p style="text-align: justify;"><br></p>
 
-</body>
-</html>
