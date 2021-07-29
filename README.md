@@ -60,7 +60,7 @@ pdf_file = "sample.pdf"
 pdfFile = open(pdf_file, "rb")
 for page in PDFPage.get_pages(pdfFile):
    interpreter.process_page(page)
-fp.close()
+pdfFile.close()
  
 # Return text from StringIO
 text = sio.getvalue()
