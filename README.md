@@ -87,8 +87,8 @@ When we have to extract images from PDF, we can use PyMuPDF. This has a fitz mod
 Perform the following.
 
 ```shell
->>> pip install pymupdf
->>> pip install fitz
+>>> python -m pip install -U pip
+>>> python -m pip install pymupdf
 ```
 
 PyMuPDF and Fitz libraries will now be installed. Now, let's get started on extracting images from PDFs.
